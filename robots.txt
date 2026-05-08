@@ -1,0 +1,28 @@
+# ToolVera – robots.txt
+# https://toolvera.in
+
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /functions/
+Disallow: /.firebase/
+Disallow: /node_modules/
+
+# Block admin and private paths
+Disallow: /admin
+Disallow: /*.json$
+Disallow: /*.rules$
+
+# Allow all CSS/JS/images for rendering
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.svg$
+Allow: /*.webp$
+
+# Sitemap location
+Sitemap: https://toolvera.in/sitemap.xml
+
+# Crawl delay (be nice to servers)
+Crawl-delay: 1
