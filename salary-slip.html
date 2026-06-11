@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Salary Slip Generator for J&K Businesses — PDF Download | ToolVera</title>
+  <meta name="description" content="Create professional salary slips for your employees in Jammu & Kashmir. Add allowances, deductions, net pay. Free PDF download. No signup. Works for shops, schools, hotels.">
+  <meta name="keywords" content="salary slip generator Kashmir, salary slip PDF J&K, free payslip maker India, employee salary slip Srinagar">
+  <link rel="canonical" href="https://toolvera.in/tools/salary-slip.html">
+  <meta name="robots" content="index, follow">
+  <meta name="geo.region" content="IN-JK">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Salary Slip Generator — ToolVera",
+    "url": "https://toolvera.in/tools/salary-slip.html",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://toolvera.in/"},
+        {"@type":"ListItem","position":2,"name":"Tools","item":"https://toolvera.in/tools.html"},
+        {"@type":"ListItem","position":3,"name":"Salary Slip Generator","item":"https://toolvera.in/tools/salary-slip.html"}
+      ]
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>">
+  <style>
+    .tool-wrap { background: var(--gray-light); min-height:100vh; padding:40px 0 80px; }
+    .tool-box { background:var(--white); border-radius:var(--radius-lg); border:1px solid var(--border); padding:36px; box-shadow:var(--shadow-md); }
+    .section-divider { height:1px; background:var(--border); margin:24px 0; }
+    .pay-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-bottom:10px; align-items:center; }
+    .pay-row input,select { padding:9px 12px; border:1.5px solid var(--border); border-radius:8px; font-size:0.88rem; font-family:'Inter',sans-serif; }
+    .pay-row input:focus,select:focus { outline:none; border-color:var(--primary); }
+    .remove-btn { background:#FEF2F2; border:none; color:#EF4444; width:32px; height:32px; border-radius:8px; cursor:pointer; font-size:1rem; }
+    .total-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    .total-side { padding:18px; border-radius:var(--radius); }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="navbar-brand">ToolVera</a>
+    <div class="navbar-links">
+      <a href="../tools.html">Tools</a><a href="../pricing.html">Pricing</a><a href="../about.html">About</a><a href="../blog.html">Blog</a><a href="../contact.html">Contact</a>
+      <a href="../pricing.html" class="btn-nav">Go Pro →</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="../tools.html">Tools</a><a href="../pricing.html">Pricing</a><a href="../contact.html">Contact</a>
+  </div>
+</nav>
+
+<main>
+<div style="background:var(--white);border-bottom:1px solid var(--border);">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol class="breadcrumb-list">
+        <li><a href="/">Home</a></li><li class="breadcrumb-sep">›</li>
+        <li><a href="../tools.html">Tools</a></li><li class="breadcrumb-sep">›</li>
+        <li aria-current="page">Salary Slip Generator</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<div class="tool-wrap">
+  <div class="container">
+    <div style="max-width:860px;margin:0 auto;">
+
+      <div style="margin-bottom:28px;">
+        <span class="badge badge-green mb-16">💼 Free HR Tool</span>
+        <h1 style="font-size:2rem;margin-bottom:10px;">Free Salary Slip Generator for J&K Businesses</h1>
+        <p style="color:var(--gray);">Generate professional salary slips for your employees in minutes. Download as PDF. Perfect for shops, schools, hotels, and any J&K small business.</p>
+      </div>
+
+      <div class="tool-box">
+
+        <!-- Company & Employee -->
+        <h2 style="font-size:1.1rem;margin-bottom:20px;">Company & Employee Details</h2>
+        <div class="grid-2">
+          <div class="form-group">
+            <label class="form-label" for="companyName">Company / Business Name *</label>
+            <input type="text" id="companyName" class="form-control" placeholder="e.g. Kashmir Valley Tours">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="companyAddress">Company Address</label>
+            <input type="text" id="companyAddress" class="form-control" placeholder="Srinagar, J&K">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="empName">Employee Name *</label>
+            <input type="text" id="empName" class="form-control" placeholder="e.g. Mudasir Ahmad">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="empDesignation">Designation</label>
+            <input type="text" id="empDesignation" class="form-control" placeholder="e.g. Tour Guide">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="empId">Employee ID</label>
+            <input type="text" id="empId" class="form-control" placeholder="e.g. EMP-001">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="salaryMonth">Salary Month *</label>
+            <input type="month" id="salaryMonth" class="form-control">
+          </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- Earnings -->
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+          <h2 style="font-size:1.1rem;margin:0;">Earnings</h2>
+          <button onclick="addEarning()" class="btn btn-outline" style="padding:7px 14px;font-size:0.82rem;">+ Add</button>
+        </div>
+        <div id="earningsContainer"></div>
+
+        <div class="section-divider"></div>
+
+        <!-- Deductions -->
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+          <h2 style="font-size:1.1rem;margin:0;">Deductions</h2>
+          <button onclick="addDeduction()" class="btn btn-outline" style="padding:7px 14px;font-size:0.82rem;">+ Add</button>
+        </div>
+        <div id="deductionsContainer"></div>
+
+        <div class="section-divider"></div>
+
+        <!-- Summary -->
+        <div class="total-grid">
+          <div class="total-side" style="background:var(--accent-light);">
+            <div style="font-size:0.8rem;font-weight:700;color:var(--accent);text-transform:uppercase;margin-bottom:8px;">Total Earnings</div>
+            <div style="font-size:1.8rem;font-weight:800;color:var(--accent);" id="totalEarnings">₹0</div>
+          </div>
+          <div class="total-side" style="background:#FEF2F2;">
+            <div style="font-size:0.8rem;font-weight:700;color:#EF4444;text-transform:uppercase;margin-bottom:8px;">Total Deductions</div>
+            <div style="font-size:1.8rem;font-weight:800;color:#EF4444;" id="totalDeductions">₹0</div>
+          </div>
+        </div>
+        <div style="background:var(--dark);color:var(--white);border-radius:var(--radius);padding:20px;margin-top:14px;display:flex;justify-content:space-between;align-items:center;">
+          <div style="font-size:1rem;font-weight:600;">Net Pay (Take Home)</div>
+          <div style="font-size:2rem;font-weight:800;color:var(--accent);" id="netPay">₹0</div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <button onclick="generateSalaryPDF()" class="btn btn-primary btn-lg">⬇ Download Salary Slip PDF</button>
+          <button onclick="showSalaryPreview()" class="btn btn-outline btn-lg">👁 Preview</button>
+        </div>
+      </div>
+
+      <!-- Preview -->
+      <div id="previewModal" style="display:none;margin-top:28px;">
+        <div id="previewContent" style="background:var(--white);border:2px solid var(--primary);border-radius:var(--radius-lg);padding:40px;"></div>
+        <div style="margin-top:16px;display:flex;gap:12px;">
+          <button onclick="generateSalaryPDF()" class="btn btn-primary">⬇ Download PDF</button>
+          <button onclick="document.getElementById('previewModal').style.display='none'" class="btn btn-outline">Close</button>
+        </div>
+      </div>
+
+      <!-- SEO -->
+      <div style="margin-top:48px;">
+        <h2 style="font-size:1.4rem;margin-bottom:10px;">Who Uses This Salary Slip Generator in J&K?</h2>
+        <p style="color:var(--gray);margin-bottom:16px;">This free tool is used by hundreds of businesses across Jammu & Kashmir including:</p>
+        <ul style="color:var(--gray);padding-left:22px;line-height:2.2;">
+          <li><strong>Travel agencies</strong> in Srinagar generating salary slips for tour guides and drivers</li>
+          <li><strong>Private schools and tuition centers</strong> across J&K for teacher payslips</li>
+          <li><strong>Hotels and houseboats</strong> on Dal Lake for housekeeping and front desk staff</li>
+          <li><strong>Garment and handicraft shops</strong> in Lal Chowk and beyond</li>
+          <li><strong>Pharmacies and general stores</strong> managing small teams</li>
+        </ul>
+        <p style="color:var(--gray);margin-top:14px;">Related: <a href="invoice-generator.html">GST Invoice Generator</a> · <a href="report-card.html">Student Report Card Generator</a></p>
+      </div>
+
+    </div>
+  </div>
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-brand">ToolVera</div><p class="footer-desc">Free business tools for Jammu & Kashmir small businesses.</p><p style="font-size:0.83rem;color:#475569;margin-top:12px;">📧 <a href="mailto:contact.abrarrtallks@gmail.com" style="color:#475569;">contact.abrarrtallks@gmail.com</a></p></div>
+      <div class="footer-col"><h4>Tools</h4><ul><li><a href="invoice-generator.html">GST Invoice</a></li><li><a href="itinerary-generator.html">Tour Itinerary</a></li><li><a href="qr-menu.html">QR Menu</a></li><li><a href="salary-slip.html">Salary Slip</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="../about.html">About</a></li><li><a href="../pricing.html">Pricing</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a href="../privacy.html">Privacy</a></li><li><a href="../terms.html">Terms</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 ToolVera. Built in Kashmir, India.</p></div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+let earnings = [], deductions = [];
+
+// Set default month
+const now = new Date();
+document.getElementById('salaryMonth').value = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}`;
+
+function addEarning(label='Basic Salary', amt=0) {
+  const id = Date.now();
+  earnings.push({id, label, amt});
+  renderEarnings();
+}
+function removeEarning(id) { earnings = earnings.filter(e => e.id !== id); renderEarnings(); }
+function renderEarnings() {
+  const c = document.getElementById('earningsContainer');
+  c.innerHTML = '';
+  earnings.forEach(e => {
+    const row = document.createElement('div');
+    row.className = 'pay-row';
+    row.innerHTML = `
+      <input type="text" value="${e.label}" placeholder="e.g. Basic Salary" oninput="updateEarning(${e.id},'label',this.value)">
+      <input type="number" value="${e.amt}" placeholder="₹ Amount" min="0" step="0.01" oninput="updateEarning(${e.id},'amt',this.value)">
+      <button class="remove-btn" onclick="removeEarning(${e.id})">✕</button>`;
+    c.appendChild(row);
+  });
+  updateSummary();
+}
+function updateEarning(id, f, v) { const e = earnings.find(i => i.id === id); if(e) e[f] = f==='label'?v:parseFloat(v)||0; updateSummary(); }
+
+function addDeduction(label='PF / ESI', amt=0) {
+  const id = Date.now();
+  deductions.push({id, label, amt});
+  renderDeductions();
+}
+function removeDeduction(id) { deductions = deductions.filter(d => d.id !== id); renderDeductions(); }
+function renderDeductions() {
+  const c = document.getElementById('deductionsContainer');
+  c.innerHTML = '';
+  deductions.forEach(d => {
+    const row = document.createElement('div');
+    row.className = 'pay-row';
+    row.innerHTML = `
+      <input type="text" value="${d.label}" placeholder="e.g. PF / ESI / TDS" oninput="updateDeduction(${d.id},'label',this.value)">
+      <input type="number" value="${d.amt}" placeholder="₹ Amount" min="0" step="0.01" oninput="updateDeduction(${d.id},'amt',this.value)">
+      <button class="remove-btn" onclick="removeDeduction(${d.id})">✕</button>`;
+    c.appendChild(row);
+  });
+  updateSummary();
+}
+function updateDeduction(id, f, v) { const d = deductions.find(i => i.id === id); if(d) d[f] = f==='label'?v:parseFloat(v)||0; updateSummary(); }
+
+function updateSummary() {
+  const te = earnings.reduce((s,e) => s + e.amt, 0);
+  const td = deductions.reduce((s,d) => s + d.amt, 0);
+  document.getElementById('totalEarnings').textContent = '₹' + te.toLocaleString('en-IN');
+  document.getElementById('totalDeductions').textContent = '₹' + td.toLocaleString('en-IN');
+  document.getElementById('netPay').textContent = '₹' + (te - td).toLocaleString('en-IN');
+}
+
+function showSalaryPreview() {
+  const te = earnings.reduce((s,e) => s + e.amt, 0);
+  const td = deductions.reduce((s,d) => s + d.amt, 0);
+  const net = te - td;
+  const monthStr = document.getElementById('salaryMonth').value || '';
+  const monthLabel = monthStr ? new Date(monthStr+'-01').toLocaleDateString('en-IN',{month:'long',year:'numeric'}) : '';
+
+  document.getElementById('previewContent').innerHTML = `
+    <div style="max-width:640px;margin:0 auto;font-family:'Inter',sans-serif;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;padding-bottom:20px;border-bottom:2px solid #E2E8F0;">
+        <div>
+          <div style="font-size:1.4rem;font-weight:800;color:#0F172A;">${document.getElementById('companyName').value||'Your Company'}</div>
+          <div style="font-size:0.82rem;color:#64748B;">${document.getElementById('companyAddress').value||''}</div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-size:1rem;font-weight:700;color:#2563EB;">SALARY SLIP</div>
+          <div style="font-size:0.85rem;color:#64748B;">${monthLabel}</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;background:#F8FAFC;padding:16px;border-radius:10px;margin-bottom:24px;">
+        <div><span style="font-size:0.75rem;color:#94A3B8;font-weight:700;text-transform:uppercase;">Employee</span><br><strong>${document.getElementById('empName').value||'—'}</strong></div>
+        <div><span style="font-size:0.75rem;color:#94A3B8;font-weight:700;text-transform:uppercase;">Designation</span><br><strong>${document.getElementById('empDesignation').value||'—'}</strong></div>
+        <div><span style="font-size:0.75rem;color:#94A3B8;font-weight:700;text-transform:uppercase;">Employee ID</span><br><strong>${document.getElementById('empId').value||'—'}</strong></div>
+        <div><span style="font-size:0.75rem;color:#94A3B8;font-weight:700;text-transform:uppercase;">Pay Month</span><br><strong>${monthLabel}</strong></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;">
+        <div>
+          <div style="font-weight:700;font-size:0.85rem;color:#065F46;background:#ECFDF5;padding:8px 12px;border-radius:6px;margin-bottom:8px;">EARNINGS</div>
+          ${earnings.map(e => `<div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid #F1F5F9;font-size:0.88rem;"><span>${e.label}</span><span>₹${e.amt.toLocaleString('en-IN')}</span></div>`).join('')}
+          <div style="display:flex;justify-content:space-between;padding:10px 0;font-weight:700;font-size:0.93rem;color:#065F46;"><span>Total</span><span>₹${te.toLocaleString('en-IN')}</span></div>
+        </div>
+        <div>
+          <div style="font-weight:700;font-size:0.85rem;color:#991B1B;background:#FEF2F2;padding:8px 12px;border-radius:6px;margin-bottom:8px;">DEDUCTIONS</div>
+          ${deductions.length ? deductions.map(d => `<div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid #F1F5F9;font-size:0.88rem;"><span>${d.label}</span><span>₹${d.amt.toLocaleString('en-IN')}</span></div>`).join('') : '<div style="font-size:0.85rem;color:#94A3B8;padding:8px 0;">No deductions</div>'}
+          <div style="display:flex;justify-content:space-between;padding:10px 0;font-weight:700;font-size:0.93rem;color:#991B1B;"><span>Total</span><span>₹${td.toLocaleString('en-IN')}</span></div>
+        </div>
+      </div>
+      <div style="background:#0F172A;color:white;padding:18px 24px;border-radius:10px;display:flex;justify-content:space-between;align-items:center;">
+        <span style="font-weight:600;">NET PAY (Take Home)</span>
+        <span style="font-size:1.5rem;font-weight:800;color:#10B981;">₹${net.toLocaleString('en-IN')}</span>
+      </div>
+      <div style="margin-top:20px;font-size:0.75rem;color:#94A3B8;text-align:center;">This is a computer-generated salary slip. Generated by ToolVera.in</div>
+    </div>`;
+  document.getElementById('previewModal').style.display = 'block';
+  document.getElementById('previewModal').scrollIntoView({behavior:'smooth'});
+}
+
+function generateSalaryPDF() {
+  showSalaryPreview();
+  setTimeout(() => {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF({ format: 'a4', unit: 'mm' });
+    doc.html(document.getElementById('previewContent'), {
+      callback: pdf => pdf.save('salary-slip-toolvera.pdf'),
+      x: 10, y: 10, width: 190, windowWidth: 700
+    });
+  }, 400);
+}
+
+// Defaults
+addEarning('Basic Salary', 12000);
+addEarning('House Rent Allowance (HRA)', 2000);
+addEarning('Travel Allowance', 500);
+addDeduction('PF (Employee Share)', 1440);
+</script>
+</body>
+</html>
