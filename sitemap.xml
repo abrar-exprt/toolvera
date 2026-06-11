@@ -68,4 +68,24 @@
     <priority>0.40</priority>
   </url>
 
+<url>
+    <loc>https://toolvera.in/tools/salary-slip.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.40</priority>
+  </url>
+        
+<url>
+    <loc>https://toolvera.in/tools/invoice-generator.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.40</priority>
+  </url>
+
+<url>
+    <loc>https://toolvera.in/tools/itinerary-generator.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.40</priority>
+  </url>
 </urlset>
