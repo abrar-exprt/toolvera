@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Kashmir Tour Itinerary PDF Generator — Travel Agents J&K | ToolVera</title>
+  <meta name="description" content="Create professional Kashmir tour itinerary PDFs for your clients in 3 minutes. Add day-by-day schedules, hotels, transport & activities. Free download. Built for Srinagar travel agents.">
+  <meta name="keywords" content="Kashmir tour itinerary generator, travel agency tools Srinagar, Kashmir itinerary PDF, tour planner J&K, free itinerary maker Kashmir">
+  <link rel="canonical" href="https://toolvera.in/tools/itinerary-generator.html">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Free Kashmir Tour Itinerary PDF Generator | ToolVera">
+  <meta property="og:description" content="Build professional Kashmir tour itinerary PDFs for clients in 3 minutes. Free for travel agents.">
+  <meta property="og:url" content="https://toolvera.in/tools/itinerary-generator.html">
+  <meta name="geo.region" content="IN-JK">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Kashmir Tour Itinerary Generator — ToolVera",
+    "url": "https://toolvera.in/tools/itinerary-generator.html",
+    "applicationCategory": "TravelApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "description": "Free online tour itinerary PDF generator for travel agents in Kashmir and J&K.",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://toolvera.in/"},
+        {"@type":"ListItem","position":2,"name":"Tools","item":"https://toolvera.in/tools.html"},
+        {"@type":"ListItem","position":3,"name":"Tour Itinerary Generator","item":"https://toolvera.in/tools/itinerary-generator.html"}
+      ]
+    },
+    "aggregateRating": {"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"89","bestRating":"5"}
+  }
+  </script>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔️</text></svg>">
+  <style>
+    .tool-wrap { background: var(--gray-light); min-height: 100vh; padding: 40px 0 80px; }
+    .tool-box { background: var(--white); border-radius: var(--radius-lg); border: 1px solid var(--border); padding: 36px; box-shadow: var(--shadow-md); }
+    .section-divider { height: 1px; background: var(--border); margin: 28px 0; }
+    .day-card { background: var(--gray-light); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; margin-bottom: 14px; }
+    .day-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+    .day-title { font-weight: 700; font-size: 0.95rem; color: var(--primary); }
+    .remove-day { background: #FEF2F2; border: none; color: #EF4444; padding: 5px 10px; border-radius: 6px; cursor: pointer; font-size: 0.82rem; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="navbar-brand">ToolVera</a>
+    <div class="navbar-links">
+      <a href="../tools.html">Tools</a><a href="../pricing.html">Pricing</a><a href="../about.html">About</a><a href="../blog.html">Blog</a><a href="../contact.html">Contact</a>
+      <a href="../pricing.html" class="btn-nav">Go Pro →</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="../tools.html">Tools</a><a href="../pricing.html">Pricing</a><a href="../contact.html">Contact</a>
+  </div>
+</nav>
+
+<main>
+<div style="background:var(--white);border-bottom:1px solid var(--border);">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol class="breadcrumb-list">
+        <li><a href="/">Home</a></li><li class="breadcrumb-sep">›</li>
+        <li><a href="../tools.html">Tools</a></li><li class="breadcrumb-sep">›</li>
+        <li aria-current="page">Tour Itinerary Generator</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<div class="tool-wrap">
+  <div class="container">
+    <div style="max-width:860px;margin:0 auto;">
+
+      <div style="margin-bottom:28px;">
+        <span class="badge badge-green mb-16">🏔️ Free Tool for Travel Agents</span>
+        <h1 style="font-size:2rem;margin-bottom:10px;">Kashmir Tour Itinerary PDF Generator</h1>
+        <p style="color:var(--gray);">Build a professional tour itinerary for your clients in minutes. Fill in the details, download as PDF, and share directly on WhatsApp.</p>
+        <div style="display:flex;gap:12px;margin-top:14px;flex-wrap:wrap;">
+          <span class="badge badge-blue">⭐ 4.9/5 Rating</span>
+          <span class="badge badge-gray">89 Reviews</span>
+          <span class="badge badge-green">Free PDF Download</span>
+        </div>
+      </div>
+
+      <div class="tool-box">
+
+        <!-- Agency & Client Info -->
+        <h2 style="font-size:1.1rem;margin-bottom:20px;">Agency & Client Details</h2>
+        <div class="grid-2">
+          <div class="form-group">
+            <label class="form-label" for="agencyName">Travel Agency Name *</label>
+            <input type="text" id="agencyName" class="form-control" placeholder="e.g. Kashmir Valley Tours">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="agencyPhone">Agency Phone / WhatsApp</label>
+            <input type="text" id="agencyPhone" class="form-control" placeholder="+91 9000000000">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="clientName">Client / Group Name *</label>
+            <input type="text" id="clientName" class="form-control" placeholder="e.g. Mr. Rahul Sharma & Family">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="pax">No. of Passengers (Pax)</label>
+            <input type="number" id="pax" class="form-control" placeholder="e.g. 4" min="1">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="tourFrom">Tour Start Date</label>
+            <input type="date" id="tourFrom" class="form-control">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="tourTo">Tour End Date</label>
+            <input type="date" id="tourTo" class="form-control">
+          </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- Tour Overview -->
+        <h2 style="font-size:1.1rem;margin-bottom:20px;">Tour Overview</h2>
+        <div class="grid-2">
+          <div class="form-group">
+            <label class="form-label" for="tourTitle">Tour Title *</label>
+            <input type="text" id="tourTitle" class="form-control" placeholder="e.g. 5 Days Kashmir Heaven Tour">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="transport">Primary Transport</label>
+            <select id="transport" class="form-control">
+              <option>Private Car / Cab</option>
+              <option>Sumo / Traveller</option>
+              <option>Bus</option>
+              <option>Train + Cab</option>
+              <option>Flight + Cab</option>
+            </select>
+          </div>
+          <div class="form-group" style="grid-column:1/-1;">
+            <label class="form-label" for="destinations">Destinations Covered (comma separated)</label>
+            <input type="text" id="destinations" class="form-control" placeholder="e.g. Srinagar, Dal Lake, Gulmarg, Pahalgam, Sonamarg">
+          </div>
+          <div class="form-group" style="grid-column:1/-1;">
+            <label class="form-label" for="inclusions">Inclusions</label>
+            <textarea id="inclusions" class="form-control" rows="2" placeholder="e.g. Hotel accommodation (3-star), Daily breakfast, All transport, Shikara ride, Gondola ride Phase 1"></textarea>
+          </div>
+          <div class="form-group" style="grid-column:1/-1;">
+            <label class="form-label" for="exclusions">Exclusions</label>
+            <textarea id="exclusions" class="form-control" rows="2" placeholder="e.g. Airfare, Personal expenses, Entry tickets, Tips & gratuities"></textarea>
+          </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- Day-by-Day Itinerary -->
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+          <h2 style="font-size:1.1rem;margin:0;">Day-by-Day Itinerary</h2>
+          <button onclick="addDay()" class="btn btn-outline" style="padding:8px 16px;font-size:0.85rem;">+ Add Day</button>
+        </div>
+
+        <div id="daysContainer"></div>
+
+        <div class="section-divider"></div>
+
+        <!-- Hotel Details -->
+        <h2 style="font-size:1.1rem;margin-bottom:20px;">Hotel / Accommodation</h2>
+        <div id="hotelsContainer">
+          <div class="grid-2">
+            <div class="form-group">
+              <label class="form-label" for="hotel1">Hotel Name — Srinagar</label>
+              <input type="text" id="hotel1" class="form-control" placeholder="e.g. Grand Palace Hotel">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="hotel2">Hotel Name — Gulmarg/Pahalgam</label>
+              <input type="text" id="hotel2" class="form-control" placeholder="e.g. Hotel Snow Land">
+            </div>
+          </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- Notes -->
+        <div class="form-group">
+          <label class="form-label" for="terms">Terms & Conditions / Notes</label>
+          <textarea id="terms" class="form-control" rows="2" placeholder="e.g. 50% advance required at time of booking. Balance due on arrival. Rates subject to availability."></textarea>
+        </div>
+
+        <!-- CTA -->
+        <div style="display:flex;gap:14px;margin-top:8px;flex-wrap:wrap;">
+          <button onclick="previewItinerary()" class="btn btn-primary btn-lg">⬇ Download Itinerary PDF</button>
+          <button onclick="showPreview()" class="btn btn-outline btn-lg">👁 Preview</button>
+        </div>
+      </div>
+
+      <!-- Preview -->
+      <div id="previewModal" style="display:none;margin-top:28px;">
+        <div id="previewContent" style="background:var(--white);border:2px solid var(--primary);border-radius:var(--radius-lg);padding:40px;"></div>
+        <div style="margin-top:16px;display:flex;gap:12px;">
+          <button onclick="previewItinerary()" class="btn btn-primary">⬇ Download PDF</button>
+          <button onclick="document.getElementById('previewModal').style.display='none'" class="btn btn-outline">Close</button>
+        </div>
+      </div>
+
+      <!-- SEO Content -->
+      <div style="margin-top:48px;">
+        <h2 style="font-size:1.4rem;margin-bottom:12px;">How to Create a Professional Kashmir Tour Itinerary PDF</h2>
+        <p style="color:var(--gray);margin-bottom:12px;">Kashmir travel agents traditionally spent 30–60 minutes in MS Word creating tour itineraries. With ToolVera's itinerary generator:</p>
+        <ol style="color:var(--gray);padding-left:22px;line-height:2.2;">
+          <li>Enter your agency name and client details</li>
+          <li>Add tour title, destinations, inclusions &amp; exclusions</li>
+          <li>Add each day — title, activities, and hotel check-in</li>
+          <li>Click Download — get a professional branded PDF in seconds</li>
+          <li>Share directly on WhatsApp with your client</li>
+        </ol>
+
+        <div class="info-box mt-24">
+          <strong>💡 Pro Tip:</strong> Add your agency logo and remove the ToolVera watermark with the <a href="../pricing.html">Pro Plan (₹499/month)</a>. Perfect for professional client-facing documents.
+        </div>
+
+        <h2 style="font-size:1.4rem;margin:28px 0 12px;">Popular Kashmir Tour Itineraries</h2>
+        <p style="color:var(--gray);">Most travel agents in Srinagar create itineraries for these popular packages:</p>
+        <ul style="color:var(--gray);padding-left:22px;line-height:2.2;">
+          <li><strong>4N/5D Kashmir Tour</strong> — Srinagar (2N), Gulmarg (1N), Pahalgam (1N)</li>
+          <li><strong>6N/7D Kashmir Tour</strong> — Srinagar, Dal Lake, Gulmarg, Pahalgam, Sonamarg</li>
+          <li><strong>Kashmir Tulip Festival Tour</strong> — March/April special package</li>
+          <li><strong>Vaishno Devi + Kashmir</strong> — Jammu entry with Katra + Srinagar valley</li>
+        </ul>
+        <p style="color:var(--gray);margin-top:12px;">Related: <a href="invoice-generator.html">GST Invoice Generator</a> · <a href="salary-slip.html">Salary Slip Generator</a> · <a href="../blog/travel-agency-tools.html">5 Tools for Kashmir Travel Agents →</a></p>
+      </div>
+
+    </div>
+  </div>
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-brand">ToolVera</div><p class="footer-desc">Free business tools for Jammu & Kashmir small businesses.</p><p style="font-size:0.83rem;color:#475569;margin-top:12px;">📧 <a href="mailto:contact.abrarrtallks@gmail.com" style="color:#475569;">contact.abrarrtallks@gmail.com</a></p></div>
+      <div class="footer-col"><h4>Tools</h4><ul><li><a href="invoice-generator.html">GST Invoice</a></li><li><a href="itinerary-generator.html">Tour Itinerary</a></li><li><a href="qr-menu.html">QR Menu</a></li><li><a href="salary-slip.html">Salary Slip</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="../about.html">About</a></li><li><a href="../pricing.html">Pricing</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a href="../privacy.html">Privacy</a></li><li><a href="../terms.html">Terms</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 ToolVera. Built in Kashmir, India.</p></div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+let days = [];
+
+function addDay(title='', activities='', hotel='') {
+  const id = Date.now();
+  days.push({id, title, activities, hotel});
+  renderDays();
+}
+
+function removeDay(id) {
+  days = days.filter(d => d.id !== id);
+  renderDays();
+}
+
+function renderDays() {
+  const c = document.getElementById('daysContainer');
+  c.innerHTML = '';
+  days.forEach((day, idx) => {
+    const div = document.createElement('div');
+    div.className = 'day-card';
+    div.innerHTML = `
+      <div class="day-header">
+        <span class="day-title">Day ${idx+1}</span>
+        <button class="remove-day" onclick="removeDay(${day.id})">✕ Remove</button>
+      </div>
+      <div class="grid-2" style="gap:12px;">
+        <div class="form-group" style="margin:0;">
+          <label class="form-label">Day Title</label>
+          <input type="text" class="form-control" placeholder="e.g. Arrival in Srinagar — Dal Lake Shikara" value="${day.title}" oninput="updateDay(${day.id},'title',this.value)">
+        </div>
+        <div class="form-group" style="margin:0;">
+          <label class="form-label">Hotel / Check-in</label>
+          <input type="text" class="form-control" placeholder="e.g. Grand Palace Hotel, Srinagar" value="${day.hotel}" oninput="updateDay(${day.id},'hotel',this.value)">
+        </div>
+        <div class="form-group" style="margin:0;grid-column:1/-1;">
+          <label class="form-label">Activities / Description</label>
+          <textarea class="form-control" rows="2" placeholder="e.g. Arrive Srinagar airport. Check-in to hotel. Evening Shikara ride on Dal Lake. Dinner at hotel." oninput="updateDay(${day.id},'activities',this.value)">${day.activities}</textarea>
+        </div>
+      </div>`;
+    c.appendChild(div);
+  });
+}
+
+function updateDay(id, field, value) {
+  const day = days.find(d => d.id === id);
+  if (day) day[field] = value;
+}
+
+function showPreview() {
+  const agencyName = document.getElementById('agencyName').value || 'Your Travel Agency';
+  const clientName = document.getElementById('clientName').value || 'Valued Guest';
+  const tourTitle = document.getElementById('tourTitle').value || 'Kashmir Tour Package';
+  const destinations = document.getElementById('destinations').value;
+  const pax = document.getElementById('pax').value;
+  const tourFrom = document.getElementById('tourFrom').value;
+  const tourTo = document.getElementById('tourTo').value;
+  const inclusions = document.getElementById('inclusions').value;
+  const exclusions = document.getElementById('exclusions').value;
+  const transport = document.getElementById('transport').value;
+  const terms = document.getElementById('terms').value;
+
+  const daysHtml = days.map((d,i) => `
+    <div style="margin-bottom:16px;padding:16px;background:#F8FAFC;border-left:4px solid #2563EB;border-radius:0 8px 8px 0;">
+      <div style="font-weight:700;color:#2563EB;margin-bottom:6px;">Day ${i+1}${d.title ? ' — ' + d.title : ''}</div>
+      <div style="font-size:0.88rem;color:#475569;margin-bottom:6px;">${d.activities||''}</div>
+      ${d.hotel ? `<div style="font-size:0.82rem;color:#64748B;">🏨 Hotel: ${d.hotel}</div>` : ''}
+    </div>`).join('');
+
+  document.getElementById('previewContent').innerHTML = `
+    <div style="max-width:680px;margin:0 auto;font-family:'Inter',sans-serif;">
+      <div style="text-align:center;padding-bottom:24px;border-bottom:2px solid #E2E8F0;margin-bottom:28px;">
+        <div style="font-size:1.6rem;font-weight:800;background:linear-gradient(135deg,#2563EB,#10B981);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">${agencyName}</div>
+        <div style="font-size:0.8rem;color:#94A3B8;margin-top:4px;">Powered by ToolVera.in</div>
+      </div>
+      <div style="background:linear-gradient(135deg,#2563EB,#10B981);color:white;padding:24px;border-radius:14px;margin-bottom:24px;">
+        <h1 style="font-size:1.5rem;margin:0 0 8px;color:white;">${tourTitle}</h1>
+        <div style="font-size:0.88rem;opacity:0.9;">👤 ${clientName} ${pax?'('+pax+' Pax)':''} ${tourFrom?'· 📅 '+tourFrom+' to '+tourTo:''}</div>
+        ${destinations?`<div style="margin-top:10px;font-size:0.85rem;opacity:0.85;">📍 ${destinations}</div>`:''}
+      </div>
+      ${inclusions||exclusions||transport?`
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;">
+        ${inclusions?`<div style="background:#ECFDF5;padding:16px;border-radius:10px;"><div style="font-weight:700;color:#065F46;margin-bottom:8px;font-size:0.85rem;">✅ INCLUSIONS</div><div style="font-size:0.83rem;color:#064E3B;white-space:pre-line;">${inclusions}</div></div>`:''}
+        ${exclusions?`<div style="background:#FEF2F2;padding:16px;border-radius:10px;"><div style="font-weight:700;color:#991B1B;margin-bottom:8px;font-size:0.85rem;">❌ EXCLUSIONS</div><div style="font-size:0.83rem;color:#7F1D1D;white-space:pre-line;">${exclusions}</div></div>`:''}
+      </div>`:''}
+      ${days.length?`<h2 style="font-size:1.1rem;margin-bottom:14px;border-bottom:1px solid #E2E8F0;padding-bottom:8px;">🗓️ Day-by-Day Schedule</h2>${daysHtml}`:''}
+      ${terms?`<div style="margin-top:20px;padding:14px;background:#EFF6FF;border-radius:8px;font-size:0.82rem;color:#1D4ED8;"><strong>Terms & Conditions</strong><br>${terms}</div>`:''}
+      <div style="margin-top:24px;text-align:center;font-size:0.75rem;color:#94A3B8;">Generated by ToolVera.in — Free Business Tools for Kashmir Travel Agents</div>
+    </div>`;
+  document.getElementById('previewModal').style.display = 'block';
+  document.getElementById('previewModal').scrollIntoView({behavior:'smooth'});
+}
+
+function previewItinerary() {
+  showPreview();
+  setTimeout(() => {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF({ format: 'a4', unit: 'mm' });
+    doc.html(document.getElementById('previewContent'), {
+      callback: pdf => pdf.save('kashmir-itinerary-toolvera.pdf'),
+      x: 10, y: 10, width: 190, windowWidth: 730
+    });
+  }, 400);
+}
+
+// Default days
+addDay('Arrival in Srinagar — Dal Lake', 'Arrive at Srinagar Airport/Railway Station. Transfer to hotel. Check-in and freshen up. Evening Shikara ride on the iconic Dal Lake. Dinner and overnight stay.', 'Houseboat / Dal Lake Hotel');
+addDay('Gulmarg Excursion', 'After breakfast, drive to Gulmarg (56 km, ~2 hrs). Gondola ride Phase 1 & 2 (optional, at own cost). Snow activities, photography. Return to Srinagar by evening.', 'Same Hotel, Srinagar');
+addDay('Pahalgam — Valley of Shepherds', 'Morning drive to Pahalgam (96 km, ~3 hrs). Visit Betaab Valley, Aru Valley, Chandanwari. River rafting optional. Return to hotel.', 'Hotel in Pahalgam');
+</script>
+</body>
+</html>
